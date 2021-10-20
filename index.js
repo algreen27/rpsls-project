@@ -1,7 +1,7 @@
 
 
-const game = require('./game')
+const {Game} = require('./game')
 
-let game = new Gamepad();
-game.runGame();
+let game = new Game();
+game.mainRun();
 

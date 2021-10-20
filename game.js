@@ -1,15 +1,28 @@
-const { Player } = require('.player');
-const Human = require('./human');
+const { AI } = require('./AI');
+const { Human } = require('./human');
 
 class Game{
     constructor(){
-        this.playerOne = new Player("Howard");
-        this.playerTwo = new ("Sheldon");
+        this.playerOne;
+        this.playerTwo;
 
-        this.gesture = [];
-
-        this.gesture.push
+       
     }
+
+    mainRun(){
+        getChoice();
+        pickGesture();
+    }
+
+    getWinner(){
+        let man = this.gesture.Human;
+        let bot = this.gesture.AI;
+            if()
+    }
+
+
 }
 
-
+module.exports = {
+    Game: Game,
+};

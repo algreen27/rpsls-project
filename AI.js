@@ -2,11 +2,18 @@ const { Player } = require("./player");
 
 
 class AI extends Player{
-    constructor(name, type){
-        this.name = name;
-        this.type = type;
-        this.score = 0
+    constructor(){
+        super();
         
+        
+        
+    }
+
+    //use random to select RPSLS
+    //store results
+
+    pickGesture(){
+       this.gesture = this.gestures[Math.floor(Math.random() * this.gestures.length)]
     }
 }
 

@@ -1,11 +1,15 @@
 
 
 class Player {
-    constructor(name){
-        this.score = 0;
+    constructor(name) {
         this.name = name;
+        this.score = 0;
+        this.gestures = [Rock,Paper,Scissors,Lizard,Spock];
+        this.gesture;
+
         
     }
+
     
 }
 
