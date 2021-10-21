@@ -3,18 +3,20 @@ const prompt = require('prompt-sync')();
 
 
 class Human extends Player{
-    constructor(name, score){
-        super();
-        // this.name = name;
-        // this.score = 0  
+    constructor(name){
+        super(name);
     }
 
     //prompt for input from user...RPSLS
 
     gestureChoice(){
         console.log('Pick a gesture: Rock, Paper, Scissors, Lizard, Spock');
-        let pick = prompt(); 
-        return pick;
+        this.gesture = prompt(); 
+            if(pick !== this.gestures){
+                console.log('Invalid entry, please try again')
+                this.gestureChoice();
+            }   
+
     }
 }
 
