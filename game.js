@@ -16,24 +16,123 @@ class Game{
         this.playerTwo= new AI('Sheldon');
         this.playerTwo.pickGesture();
 
+        this.getWinner();
         // to select human to human
     }
     
     getWinner(){
-        console.log(this.gesture.Human);
-        console.log(this.gesture.AI);
+        console.log(`${this.playerOne.name} chose ${this.playerOne.gesture}`);
+        console.log(`${this.playerTwo.name} chose ${this.playerTwo.gesture}`);
         
-
-
         while(this.playerOne.score < 3 && this.playerTwo.score < 3){
-            if(this.gesture.Human == "Rock" && this.gesture.AI == "Scissors"){
-                console.log(`${this.playerOne} is the winner!`);
-
-            }
-
-
-            else if(this.gesture.Human !== this.gesture.AI){
+            // if(this.playerOne.score === 3 || this.playerTwo.score === 3){
+            //     console.log(`Final score is ${this.playerOne.name} ${this.playerOne.score} and ${this.playerTwo.name} ${this.playerTwo.score}`);
+            // }
+            if(this.playerOne.gesture == "Rock" && this.playerTwo.gesture == "Scissors"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
                 this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Rock" && this.playerOne.gesture == "Scissors"){
+                this.playerTwo.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Scissors" && this.playerTwo.gesture == "Paper"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Scissors" && this.playerOne.gesture == "Paper"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Paper" && this.playerTwo.gesture == "Rock"){
+                this.playerOne.score++
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Paper" && this.playerOne.gesture == "Rock"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Rock" && this.playerTwo.gesture == "Lizzard"){
+                this.playerOne.score++
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Rock" && this.playerOne.gesture == "Lizard"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Lizard" && this.playerTwo.gesture == "Spock"){
+                this.playerOne.score++
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Lizard" && this.playerOne.gesture == "Spock"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Spock" && this.playerTwo.gesture == "Scissors"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Spock" && this.playerOne.gesture == "Scissors"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Scissors" && this.playerTwo.gesture == "Lizard"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Scissors" && this.playerOne.gesture == "Lizard"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`);
+                this.mainRun(); 
+            }
+            if(this.playerOne.gesture == "Lizard" && this.playerTwo.gesture == "Paper"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Lizard" && this.playerOne.gesture == "Paper"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Paper" && this.playerTwo.gesture == "Spock"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Paper" && this.playerOne.gesture == "Spock"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            if(this.playerOne.gesture == "Spock" && this.playerTwo.gesture == "Rock"){
+                this.playerOne.score++;
+                console.log(`${this.playerOne.name} is the winner!`);
+                this.mainRun();
+            }
+            if(this.playerTwo.gesture == "Spock" && this.playerOne.gesture == "Rock"){
+                this.playerOne.score++;
+                console.log(`${this.playerTwo.name} is the winner!`); 
+                this.mainRun();
+            }
+            
+            else if(this.playerOne.gesture == this.playerTwo.gesture){
+                this.mainRun();
+                let secondRun = anotherRnd();
+                
             }
 
 
